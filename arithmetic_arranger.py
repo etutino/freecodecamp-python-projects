@@ -65,7 +65,12 @@ def arithmetic_arranger(problems, answers=True):
       fourth_line.append(" " * len_diff + subt)
 
   # Putting the values and answer in the final format
-  arranged_problems = (4 * " ").join(first_line) + "\n" + (
-    4 * " ").join(second_line) + "\n" + (4 * " ").join(third_line) + "\n" + (
-      4 * " ").join(fourth_line)
+  if answers == True:
+    arranged_problems = (4 * " ").join(first_line) + "\n" + (
+      4 * " ").join(second_line) + "\n" + (4 * " ").join(third_line) + "\n" + (
+        4 * " ").join(fourth_line)
+  else:
+    arranged_problems = (4 * " ").join(first_line) + "\n" + (
+      4 * " ").join(second_line) + "\n" + (4 * " ").join(third_line)
+
   return arranged_problems
