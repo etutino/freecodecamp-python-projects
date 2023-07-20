@@ -1,4 +1,4 @@
-def arithmetic_arranger(problems, answers=True):
+def arithmetic_arranger(problems, answers=False):
   # Checking the number of problems
   if len(problems) > 5:
     return "Error: Too many problems."
@@ -53,8 +53,7 @@ def arithmetic_arranger(problems, answers=True):
       return "Error: Numbers cannot be more than four digits."
 
   # Calculating the final answer and adding the necessary spaces
-  for first, second, op, third in zip(first_num, second_num, operator,
-                                      third_line):
+  for first, second, op, third in zip(first_num, second_num, operator, third_line):
     if op == "+":
       add = str(int(first) + int(second))
       len_diff = len(third) - len(add)
@@ -67,10 +66,8 @@ def arithmetic_arranger(problems, answers=True):
   # Putting the values and answer in the final format
   if answers == True:
     arranged_problems = (4 * " ").join(first_line) + "\n" + (
-      4 * " ").join(second_line) + "\n" + (4 * " ").join(third_line) + "\n" + (
-        4 * " ").join(fourth_line)
+      4 * " ").join(second_line) + "\n" + (4 * " ").join(third_line) + "\n" + (4 * " ").join(fourth_line)
   else:
-    arranged_problems = (4 * " ").join(first_line) + "\n" + (
-      4 * " ").join(second_line) + "\n" + (4 * " ").join(third_line)
+    arranged_problems = (4 * " ").join(first_line) + "\n" + (4 * " ").join(second_line) + "\n" + (4 * " ").join(third_line)
 
   return arranged_problems
